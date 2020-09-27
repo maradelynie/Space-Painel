@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Righteous", cursive;
+}
+p {
+  font-size: 18px;
+  line-height: 20px;
+}
+.main_container {
+  padding: 10px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: $containerSize;
+  margin: auto;
+  min-width: 310px;
+}
+.spacepainel_title {
+  text-transform: uppercase;
+  font-size: 3.4em;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .spacepainel_title {
+    text-align: center;
+    font-size: 2.6em;
+    margin-bottom: 10px;
+  }
+}
+.card_container {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: white solid 10px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

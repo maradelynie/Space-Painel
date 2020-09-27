@@ -1,0 +1,12 @@
+.login_form {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.login_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

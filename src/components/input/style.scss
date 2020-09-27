@@ -1,0 +1,16 @@
+.input_default {
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 3px;
+  padding: 15px;
+  font-size: 18px;
+}
+.input_default::placeholder {
+  color: white;
+}
+.input_Search {
+  @extend .input_default;
+  line-height: 30px;
+  padding: 0;
+  margin: 10px;
+}

@@ -1,0 +1,20 @@
+.navigation_container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon_navi path {
+  color: black;
+}
+.icon_navi {
+  font-size: 2.2em;
+  cursor: pointer;
+}
+.icon_navi-selected {
+  font-size: 2.2em;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}

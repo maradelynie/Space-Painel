@@ -1,0 +1,18 @@
+.button_default {
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 3px;
+  padding: 15px;
+  font-size: 18px;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button_default:hover {
+  opacity: 0.7;
+}
+
+.button_default:active {
+  opacity: 1;
+}
