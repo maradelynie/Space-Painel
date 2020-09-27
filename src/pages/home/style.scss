@@ -1,5 +1,4 @@
 .home_container {
-  height: 85vh;
   width: 100%;
   display: grid;
   grid-template-rows: 4rem 1fr;
@@ -15,16 +14,20 @@
   display: grid;
   grid-template-columns: 1fr 4rem;
 }
-.content_data {
-  height: 100%;
-  overflow: hidden;
-  // overflow-y: hidden;
-  // -ms-overflow-style: none; /* IE and Edge */
-  // scrollbar-width: none; /* Firefox */
+.content_main {
+  position: relative;
 }
-// .content_data::-webkit-scrollbar {
-//   display: none; /* Hide scrollbar for Chrome, Safari and Opera */
-// }
+.content_data {
+  height: 70vh;
+  padding-bottom: 10em;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.content_data::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
 .home_title {
   border-bottom: 3px solid white;
   padding: 15px;

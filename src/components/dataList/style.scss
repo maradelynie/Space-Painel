@@ -1,0 +1,57 @@
+@import "../../scss/variables.scss";
+
+.contentItem_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.contentItem_header:hover {
+  background-color: $transparent-bg;
+}
+.contentItem_details {
+  padding: 20px;
+}
+.contentItem_container {
+  border-bottom: $transparent-bg solid 3px;
+}
+.icon_item {
+  font-size: 1.5em;
+  margin: 0 10px;
+  pointer-events: none;
+}
+.contentItem_header h3 {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.icon_item-arrow path {
+  pointer-events: fill;
+}
+.icon_item {
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+.contentItem_header-active {
+  @extend .contentItem_header;
+  background-color: $transparent-bg;
+}
+.item_warning {
+  width: 100%;
+  display: flex;
+
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.content_gradient {
+  height: 20vh;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}

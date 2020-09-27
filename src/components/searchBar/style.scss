@@ -1,12 +1,17 @@
+@import "../../scss/variables.scss";
+
 .icon_search {
   font-size: 1.6em;
   cursor: pointer;
-  margin: 15px 0px 0px 15px;
 }
 .searchBar_container {
-  background-color: rgba(255, 255, 255, 0.233);
+  background-color: $transparent-bg;
   display: flex;
+  height: 3.5em;
+  align-items: center;
+  gap: 15px;
+  padding: 0 15px;
 }
-.input_search {
-  margin-left: 20px;
+.searchInput_container {
+  width: 100%;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.scss";
 
-export default function Input({ placeholder, type }) {
+export default function Input({ placeholder, type, onChange, value }) {
   const [style, setStyle] = useState("input_default");
   useEffect(() => {
     const changeStyle = async () => {
@@ -14,7 +14,13 @@ export default function Input({ placeholder, type }) {
 
   return (
     <>
-      <input className={style} placeholder={placeholder} type={type} />
+      <input
+        className={style}
+        onChange={onChange}
+        value={value}
+        placeholder={placeholder}
+        type={type}
+      />
     </>
   );
 }

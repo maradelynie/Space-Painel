@@ -8,7 +8,6 @@ export default function Background() {
   }, []);
   const travel = () => {
     var canvas = document.getElementById("background_canvas");
-    console.log(canvas);
     var flr = Math.floor;
 
     canvas.width = canvas.offsetWidth;

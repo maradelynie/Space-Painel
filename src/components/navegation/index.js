@@ -41,6 +41,7 @@ export default function Navigation({ goToRebels }) {
           {navigationIcons.map((icon) => {
             return (
               <FontAwesomeIcon
+                key={icon.title}
                 onClick={() => navigate(icon)}
                 className="icon_navi"
                 icon={icon.icon}

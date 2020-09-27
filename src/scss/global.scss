@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap");
 @import "./variables.scss";
 
 * {
   box-sizing: border-box;
   margin: 0;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: "PT Sans Caption", sans-serif;
   outline: none;
+  list-style: none;
+  padding-inline-start: 0px;
+}
+*::-webkit-search-cancel-button {
+  appearance: none;
 }
 h1,
 h2,
@@ -15,7 +21,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Righteous", cursive;
+  font-family: "Russo One", sans-serif;
+  font-weight: 100;
 }
 p {
   font-size: 18px;
@@ -30,9 +37,10 @@ p {
   width: 100%;
   max-width: $containerSize;
   margin: auto;
-  min-width: 310px;
 }
 .spacepainel_title {
+  font-family: "Righteous", cursive;
+
   text-transform: uppercase;
   font-size: 3.4em;
   margin-bottom: 10px;
@@ -54,4 +62,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.none {
+  display: none !important;
 }

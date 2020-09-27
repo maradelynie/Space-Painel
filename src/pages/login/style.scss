@@ -1,12 +1,17 @@
 .login_form {
   min-height: 400px;
+  max-width: 500px;
+  padding: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .login_inputs {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }

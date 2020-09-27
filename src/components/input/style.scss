@@ -4,13 +4,17 @@
   border-radius: 3px;
   padding: 15px;
   font-size: 18px;
+  min-width: 200px;
+  width: 100%;
 }
 .input_default::placeholder {
   color: white;
 }
 .input_Search {
   @extend .input_default;
+  max-width: 200px;
+  width: 100%;
   line-height: 30px;
-  padding: 0;
-  margin: 10px;
+  padding: 0 15px;
+  font-size: 16px;
 }
