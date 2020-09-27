@@ -1,47 +1,44 @@
+import { faGlobeEurope, faUsers } from "@fortawesome/free-solid-svg-icons";
+
 const INITIAL_STATE = {
-    records : [] ,
-    selectedItem : {},
-    defaultTime : 9   
-}
+  records: [],
+  list: [],
+  page: { title: "Planetas", icon: faGlobeEurope },
+  selectedItem: {},
+  pages: [
+    { title: "Rebeldes", icon: faUsers },
+    { title: "Planetas", icon: faGlobeEurope },
+  ],
+};
 
-function reducer(state = INITIAL_STATE, action){
-    switch (action.type) {
-        case "SET_RECORDS":
-            
-        return {
-            ...state,
-            records: action.value
-        }
-        
-        case "ADD_RECORD":
-        return {
-            ...state,
-            records: [action.value,...state.records]
-        }
-        case "DELETE_RECORD":
-        
-        return {
-            ...state,
-            records: state.records.filter(record => record._id!==action.value._id)
-        }
-        case "UPDATE_RECORD":
-        
-        return {
-            ...state,
-            records: [action.value, ...state.records.filter(record => record._id!==action.value._id)]
+function reducer(state = INITIAL_STATE, action) {
+  switch (action.type) {
+    case "SET_RECORDS":
+      return {
+        ...state,
+        records: action.value,
+        list: action.value,
+      };
+    case "SET_LIST":
+      return {
+        ...state,
+        list: action.value,
+      };
 
-        }    
-        case "SELECT_ITEM":
-        
-            return {
-                ...state,
-                selectedItem: action.value
-            }      
-    
-        default:
-            return state
-    }
-    
+    case "SELECT_ITEM":
+      return {
+        ...state,
+        selectedItem: action.value,
+      };
+    case "CHANGE_PAGE":
+      return {
+        ...state,
+        page: action.value,
+      };
+
+    default:
+      return state;
+  }
 }
 
 export default reducer;

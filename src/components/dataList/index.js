@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.scss";
+
+import { useSelector } from "react-redux";
 
 import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -8,7 +10,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Button({ content, page }) {
+export default function Button() {
+  const { list, page } = useSelector((state) => state);
+
   const showDetails = (e) => {
     e.persist();
     const header = e.target;
@@ -25,8 +29,8 @@ export default function Button({ content, page }) {
   return (
     <>
       <ul className="content_data">
-        {content?.map((item) => {
-          if (item.habitantes) {
+        {list.map((item) => {
+          if (list[0].habitantes) {
             return (
               <li key={item.id} className="contentItem_container">
                 <div
@@ -59,7 +63,7 @@ export default function Button({ content, page }) {
                 </ul>
               </li>
             );
-          } else {
+          } else if (page.title === "Rebeldes") {
             return (
               <li key={item.id} className="contentItem_container">
                 <div
