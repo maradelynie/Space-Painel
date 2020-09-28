@@ -52,7 +52,7 @@ Now the application is running. It will open on your browser.(if not just open h
 
 The app is deployed on Vercel in the following url:
 
-[Space Painel](https://askme-frontend-maraoliveira.herokuapp.com/) 
+[Space Painel](https://space-painel.vercel.app/) 
 
 For to login use the following credentials:
 
