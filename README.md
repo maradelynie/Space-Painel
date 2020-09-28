@@ -1,6 +1,6 @@
 # Space Painel - Frontend 
 
-Space Pàinel is a web application that will keep the Rebels updated about the status of planest and allies all over the universe.
+Space Painel is a web application that will keep the Rebels updated about the status of planest and allies all over the universe.
 
 The application was made in ReactJs, using Redux, axios and other libraries. The Backend was made in NodeJs, a simple API using mongoose and simple ways to make autentication and keep the data safe, check it here: https://github.com/maradelynie/Space-painel-Backend .
 
