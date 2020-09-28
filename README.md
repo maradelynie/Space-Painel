@@ -22,10 +22,6 @@ This project uses DataBase from MongoDB, for use that you will need to have an C
 [SingUp MongoDB Here](https://cloud.mongodb.com/)
 
 
-## Installing
-
-To open the Dev mode you need to clone the repo, install and initialize both, backend and frontend.
-
 
 ### preparing;
 
