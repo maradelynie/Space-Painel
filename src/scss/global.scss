@@ -40,16 +40,15 @@ p {
 }
 .spacepainel_title {
   font-family: "Righteous", cursive;
-
   text-transform: uppercase;
   font-size: 3.4em;
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .spacepainel_title {
     text-align: center;
-    font-size: 2.6em;
+    font-size: 2em;
     margin-bottom: 10px;
   }
 }
@@ -62,6 +61,11 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 450px) {
+  .main_container {
+    justify-content: initial;
+  }
 }
 .none {
   display: none !important;

@@ -14,8 +14,15 @@
   display: grid;
   grid-template-columns: 1fr 4rem;
 }
+@media only screen and (max-width: 450px) {
+  .content_container {
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+  }
+}
 .content_main {
   position: relative;
+  min-width: 150px;
 }
 .content_data {
   height: 70vh;
@@ -23,6 +30,11 @@
   overflow-y: auto;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+@media only screen and (max-width: 450px) {
+  .content_data {
+    height: 55vh;
+  }
 }
 .content_data::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari and Opera */

@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import Navigation from "../../components/navegation";
 import SearchBar from "../../components/searchBar";
 import DataList from "../../components/dataList";
+import AddPlanet from "../../components/addPlanet";
+
 import "./style.scss";
 
 import { setRecords } from "../../redux/actions";
@@ -14,7 +16,7 @@ import rebels from "../../mock/mockRebels.json";
 
 export default function Home() {
   const dispatch = useDispatch();
-  const { page } = useSelector((state) => state);
+  const { page, addPlanet } = useSelector((state) => state);
 
   useEffect(() => {
     getData();
@@ -28,18 +30,27 @@ export default function Home() {
     }
   };
 
+  const showAddModal = () => {
+    if (addPlanet) {
+      return <AddPlanet />;
+    }
+  };
+
   return (
-    <div className="home_container">
-      <div className="home_title">
-        <h2>{page.title}</h2>
+    <>
+      {showAddModal()}
+      <div className="home_container">
+        <div className="home_title">
+          <h2>{page.title}</h2>
+        </div>
+        <section className="content_container">
+          <main className="content_main">
+            <SearchBar />
+            <DataList />
+          </main>
+          <Navigation />
+        </section>
       </div>
-      <section className="content_container">
-        <main className="content_main">
-          <SearchBar />
-          <DataList />
-        </main>
-        <Navigation />
-      </section>
-    </div>
+    </>
   );
 }

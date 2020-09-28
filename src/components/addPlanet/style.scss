@@ -1,0 +1,52 @@
+.modal_background {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  pointer-events: none;
+}
+.addPlanet_card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: white solid 10px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 15;
+  max-width: 970px;
+}
+.addPlanet_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+.addPlanet_icon {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.addPlanet_inputConteiner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+.addPlanet_select {
+  margin: 20px 0;
+}
+.addPlanet_form {
+  padding: 20px;
+  width: 100%;
+}
+@media only screen and (max-width: 450px) {
+  .addPlanet_inputConteiner {
+    grid-template-columns: 1fr;
+  }
+}

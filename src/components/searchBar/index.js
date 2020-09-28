@@ -5,7 +5,7 @@ import Filter from "../filter";
 import "./style.scss";
 
 import { useSelector } from "react-redux";
-import { setList } from "../../redux/actions";
+import { setList, showAdd } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 
 import { faFilter, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
@@ -19,9 +19,15 @@ export default function SearchBar() {
 
   // const [showFilter, setShowFilter] = useState(false);
 
-  const showAdd = () => {
+  const showAddBtn = () => {
     if (page.title === "Planetas") {
-      return <FontAwesomeIcon className="icon_search" icon={faPlusCircle} />;
+      return (
+        <FontAwesomeIcon
+          className="icon_search"
+          onClick={() => dispatch(showAdd())}
+          icon={faPlusCircle}
+        />
+      );
     }
   };
 
@@ -54,7 +60,7 @@ export default function SearchBar() {
           type="search"
         />
       </div>
-      {showAdd()}
+      {showAddBtn()}
     </div>
   );
 }

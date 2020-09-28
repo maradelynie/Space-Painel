@@ -2,6 +2,7 @@ import { faGlobeEurope, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 const INITIAL_STATE = {
   records: [],
+  addPlanet: false,
   list: [],
   page: { title: "Planetas", icon: faGlobeEurope },
   selectedItem: {},
@@ -24,16 +25,20 @@ function reducer(state = INITIAL_STATE, action) {
         ...state,
         list: action.value,
       };
-
-    case "SELECT_ITEM":
+    case "ADD_RECORD":
       return {
         ...state,
-        selectedItem: action.value,
+        list: [...state.list, action.value],
       };
     case "CHANGE_PAGE":
       return {
         ...state,
         page: action.value,
+      };
+    case "SHOW_ADD":
+      return {
+        ...state,
+        addPlanet: !state.addPlanet,
       };
 
     default:

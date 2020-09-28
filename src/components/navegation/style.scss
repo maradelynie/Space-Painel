@@ -18,3 +18,11 @@
   right: 15px;
   top: 15px;
 }
+@media only screen and (max-width: 450px) {
+  .icon_navi-selected {
+    font-size: 2em;
+  }
+  .icon_navi {
+    font-size: 2em;
+  }
+}

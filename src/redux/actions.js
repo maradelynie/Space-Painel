@@ -10,13 +10,6 @@ export function addRecord(value) {
     value: value,
   };
 }
-
-export function selectItem(value) {
-  return {
-    type: "SELECT_ITEM",
-    value: value,
-  };
-}
 export function setList(value) {
   return {
     type: "SET_LIST",
@@ -27,5 +20,10 @@ export function setPage(value) {
   return {
     type: "CHANGE_PAGE",
     value: value,
+  };
+}
+export function showAdd() {
+  return {
+    type: "SHOW_ADD",
   };
 }
