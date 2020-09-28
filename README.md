@@ -1,68 +1,107 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Space Painel - Frontend 
 
-## Available Scripts
+Space Pàinel is a web application that will keep the Rebels updated about the status of planest and allies all over the universe.
 
-In the project directory, you can run:
+The application was made in ReactJs, using Redux, axios and other libraries. The Backend was made in NodeJs, a simple API using mongoose and simple ways to make autentication and keep the data safe, check it here: https://github.com/maradelynie/Space-painel-Backend .
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For to have this project running on your computer you just need to clone the the repo and run $ yarn or $ npm install.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `yarn test`
+First of all you will need NodeJs, a browser that can run V8 engine like Chrome and a packege manager like NPM (but I strongly recommend to use Yarn)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+[Get Node Here](https://nodejs.org/en/) 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Get Yarn Here](https://yarnpkg.com/) 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This project uses DataBase from MongoDB, for use that you will need to have an Cluster with a database "askMe" on atlas MongoDB.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[SingUp MongoDB Here](https://cloud.mongodb.com/)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To open the Dev mode you need to clone the repo, install and initialize both, backend and frontend.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### preparing;
 
-## Learn More
+The BASE URL of the api is already there for to use my API, but if you wish to change it just acesses src>api>inde.j and change the const base, at the top of the file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### install;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+At your terminal navigate to frontend folder and use the same;
 
-### Code Splitting
+```
+$ npm install    (or)       $ yarn 
+```
+(wait till finished)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+### run the app;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+At your terminal past the following command line;
 
-### Making a Progressive Web App
+```
+$ npm run start   (or)       $ yarn start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Now the application is running. It will open on your browser.(if not just open http://localhost:3000/ and wait till load)
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Deployment
 
-### Deployment
+The app is deployed on Vercel in the following url:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+[Space Painel](https://askme-frontend-maraoliveira.herokuapp.com/) 
 
-### `yarn build` fails to minify
+For to login use the following credentials:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+email:
+```
+mara@mara.com
+```
+password
+```
+123
+```
+
+
+## Supported on
+
+```
+Chrome
+Safari
+Firfox
+```
+
+## Made With
+
+* reactJs ^16.13.1
+* Redux ^4.0.5
+* Sass (node-sass) ^4.14.1
+
+
+* axios ^0.19.2
+* Express 4.17.1
+* mongoose 5.9.19
+* mongoDB 3.5.9
+
+
+* git
+* opentdb
+* vercel
+
+-See more at packege.json on backend and frontend folder
+
+## Authors
+
+**Mara Oliveira** 
+
+
+## License
+
+ MIT
