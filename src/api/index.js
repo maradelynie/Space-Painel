@@ -1,7 +1,7 @@
 import axios from "axios";
 import sha1 from "sha1";
 
-const base = process.env.REACT_APP_API_URL;
+const base = "https://space-painel-backend.herokuapp.com/";
 const api = axios.create({
   baseURL: base,
 });
