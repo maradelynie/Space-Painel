@@ -1,8 +1,7 @@
 import axios from "axios";
 import sha1 from "sha1";
 
-const base = "http://localhost:3001/";
-
+const base = process.env.REACT_APP_API_URL;
 const api = axios.create({
   baseURL: base,
 });
