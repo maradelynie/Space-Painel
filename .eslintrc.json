@@ -13,5 +13,7 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": {}
+  "rules": {
+    "imports": "no-restricted-exports"
+  }
 }

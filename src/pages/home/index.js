@@ -1,33 +1,54 @@
 import React, { useEffect } from "react";
-
+import { getPlanetsApi, getRebelsApi, validateToken } from "../../api";
 import Navigation from "../../components/navegation";
 import SearchBar from "../../components/searchBar";
 import DataList from "../../components/dataList";
 import AddPlanet from "../../components/addPlanet";
+import { useHistory } from "react-router-dom";
 
 import "./style.scss";
 
-import { setRecords } from "../../redux/actions";
+import { setRecords, showAlert } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-import planets from "../../mock/mockPlanets.json";
-import rebels from "../../mock/mockRebels.json";
-
 export default function Home() {
+  const history = useHistory();
+
   const dispatch = useDispatch();
   const { page, addPlanet } = useSelector((state) => state);
 
   useEffect(() => {
     const getData = async () => {
       if (page.title === "Planetas") {
-        dispatch(setRecords(planets));
+        const data = await getPlanetsApi();
+        dispatch(setRecords(data));
       } else if (page.title === "Rebeldes") {
-        dispatch(setRecords(rebels));
+        const data = await getRebelsApi();
+        dispatch(setRecords(data));
       }
     };
     getData();
   }, [page, dispatch]);
+
+  useEffect(() => {
+    const validate = async () => {
+      const valid = await validateToken();
+      if (!valid.res) {
+        history.push("/");
+        dispatch(showAlert());
+      }
+    };
+    validate();
+    const timeValidation = setInterval(() => {
+      validate();
+    }, 10000);
+
+    return () => {
+      clearInterval(timeValidation);
+      localStorage.removeItem("token");
+    };
+  }, []);
 
   const showAddModal = () => {
     if (addPlanet) {

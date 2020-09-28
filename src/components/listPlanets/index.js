@@ -26,7 +26,7 @@ export default function ListPlanets({ list }) {
       {list.map((item) => {
         if (item.habitantes) {
           return (
-            <li key={item.id} className="contentItem_container">
+            <li key={item._id} className="contentItem_container">
               <div
                 onClick={(e) => showDetails(e)}
                 className="contentItem_header"

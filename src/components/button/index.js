@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.scss";
 
-export default function Button({ type, text }) {
+export default function Button({ type, text, onClick }) {
   return (
     <>
-      <button className="button_default" type={type}>
+      <button className="button_default" onClick={onClick} type={type}>
         {text}
       </button>
     </>

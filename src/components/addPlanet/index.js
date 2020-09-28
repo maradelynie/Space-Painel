@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "../input";
 import Button from "../button";
+import { postPlanetApi } from "../../api";
 
 import "./style.scss";
 
@@ -19,7 +20,7 @@ export default function SearchBar() {
   const [dominio, setDominio] = useState(null);
   const [habitantes, setHabitantes] = useState("");
 
-  const submitRecord = (e) => {
+  const submitRecord = async (e) => {
     e.preventDefault();
     const data = {
       nome: nome,
@@ -28,7 +29,9 @@ export default function SearchBar() {
       regiao: regiao,
       habitantes: habitantes,
     };
-    dispatch(addRecord(data));
+    const postData = await postPlanetApi(data);
+    console.log(postData);
+    dispatch(addRecord(postData));
     dispatch(showAdd());
   };
   return (

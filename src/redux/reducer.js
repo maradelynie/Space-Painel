@@ -1,6 +1,7 @@
 import { faGlobeEurope, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 const INITIAL_STATE = {
+  alert: false,
   records: [],
   addPlanet: false,
   list: [],
@@ -14,6 +15,11 @@ const INITIAL_STATE = {
 
 function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
+    case "SET_TOKEN":
+      return {
+        ...state,
+        token: action.value,
+      };
     case "SET_RECORDS":
       return {
         ...state,
@@ -40,7 +46,11 @@ function reducer(state = INITIAL_STATE, action) {
         ...state,
         addPlanet: !state.addPlanet,
       };
-
+    case "SHOW_ALERT":
+      return {
+        ...state,
+        alert: !state.alert,
+      };
     default:
       return state;
   }
