@@ -19,16 +19,15 @@ export default function Home() {
   const { page, addPlanet } = useSelector((state) => state);
 
   useEffect(() => {
+    const getData = async () => {
+      if (page.title === "Planetas") {
+        dispatch(setRecords(planets));
+      } else if (page.title === "Rebeldes") {
+        dispatch(setRecords(rebels));
+      }
+    };
     getData();
-  }, [page]);
-
-  const getData = async () => {
-    if (page.title === "Planetas") {
-      dispatch(setRecords(planets));
-    } else if (page.title === "Rebeldes") {
-      dispatch(setRecords(rebels));
-    }
-  };
+  }, [page, dispatch]);
 
   const showAddModal = () => {
     if (addPlanet) {

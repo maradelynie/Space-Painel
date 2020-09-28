@@ -28,7 +28,6 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
 (function () {
-  "use strict";
   var define = 1;
   var shim = {};
   if (typeof exports === "undefined") {
@@ -1611,7 +1610,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
     var mat2 = {};
 
-    var mat2Identity = new Float32Array([1, 0, 0, 1]);
+    // var mat2Identity = new Float32Array([1, 0, 0, 1]);
 
     /**
      * Creates a new identity mat2
@@ -1881,7 +1880,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
     var mat2d = {};
 
-    var mat2dIdentity = new Float32Array([1, 0, 0, 1, 0, 0]);
+    // var mat2dIdentity = new Float32Array([1, 0, 0, 1, 0, 0]);
 
     /**
      * Creates a new identity mat2d
@@ -2147,7 +2146,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
     var mat3 = {};
 
-    var mat3Identity = new Float32Array([1, 0, 0, 0, 1, 0, 0, 0, 1]);
+    // var mat3Identity = new Float32Array([1, 0, 0, 0, 1, 0, 0, 0, 1]);
 
     /**
      * Creates a new identity mat3
@@ -2625,24 +2624,24 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
     var mat4 = {};
 
-    var mat4Identity = new Float32Array([
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-    ]);
+    // var mat4Identity = new Float32Array([
+    //   1,
+    //   0,
+    //   0,
+    //   0,
+    //   0,
+    //   1,
+    //   0,
+    //   0,
+    //   0,
+    //   0,
+    //   1,
+    //   0,
+    //   0,
+    //   0,
+    //   0,
+    //   1,
+    // ]);
 
     /**
      * Creates a new identity mat4
@@ -3788,7 +3787,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
     var quat = {};
 
-    var quatIdentity = new Float32Array([0, 0, 0, 1]);
+    // var quatIdentity = new Float32Array([0, 0, 0, 1]);
 
     /**
      * Creates a new identity quat

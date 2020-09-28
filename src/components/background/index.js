@@ -15,10 +15,8 @@ export default function Background() {
 
     var halfw = canvas.width / 2,
       halfh = canvas.height / 2,
-      step = 2,
       warpZ = 12,
       speed = 0.075;
-    var stampedDate = new Date();
 
     var ctx = canvas.getContext("2d");
 
@@ -111,10 +109,6 @@ export default function Background() {
     var mStarField = new starfield();
 
     function draw() {
-      var millSeconds = 1000 * 10;
-
-      var currentTime = new Date();
-
       speed = 0.025;
 
       ctx.setTransform(1, 0, 0, 1, 0, 0);

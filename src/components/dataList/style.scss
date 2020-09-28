@@ -1,43 +1,9 @@
 @import "../../scss/variables.scss";
 
-.contentItem_header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  transition: 0.2s;
-  cursor: pointer;
-}
-.contentItem_header:hover {
-  background-color: $transparent-bg;
-}
-.contentItem_details {
-  padding: 20px;
-}
-.contentItem_container {
-  border-bottom: $transparent-bg solid 3px;
-}
-.icon_item {
-  font-size: 1.5em;
-  margin: 0 10px;
-  pointer-events: none;
-}
-.contentItem_header h3 {
-  display: flex;
-  align-items: center;
-  pointer-events: none;
-}
-
 .icon_item-arrow path {
   pointer-events: fill;
 }
-.icon_item {
-  font-size: 1.5em;
-  margin: 0 10px;
-}
-.contentItem_header-active {
-  @extend .contentItem_header;
-  background-color: $transparent-bg;
-}
+
 .item_warning {
   width: 100%;
   display: flex;

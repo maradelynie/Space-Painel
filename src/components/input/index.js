@@ -10,6 +10,7 @@ export default function Input({
   options,
 }) {
   const [style, setStyle] = useState("input_default");
+
   useEffect(() => {
     const changeStyle = async () => {
       if (type === "search") {
@@ -17,7 +18,8 @@ export default function Input({
       }
     };
     changeStyle();
-  }, []);
+  }, [type]);
+
   if (options) {
     return (
       <select

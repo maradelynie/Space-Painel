@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 
 import "./style.scss";
@@ -7,10 +7,7 @@ import { setPage } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
-import {
-  faSignOutAlt,
-  faGalacticRepublic,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navigation() {

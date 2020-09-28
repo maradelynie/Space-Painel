@@ -4,7 +4,6 @@ import Button from "../button";
 
 import "./style.scss";
 
-import { useSelector } from "react-redux";
 import { showAdd, addRecord } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 
