@@ -4,6 +4,25 @@ Space Painel is a web application that will keep the Rebels updated about the st
 
 The application was made in ReactJs, using Redux, axios and other libraries. The Backend was made in NodeJs, a simple API using mongoose and simple ways to make autentication and keep the data safe, check it here: https://github.com/maradelynie/Space-painel-Backend .
 
+
+try it:
+
+https://space-painel.vercel.app/
+
+For to login use the following credentials:
+
+email:
+```
+mara@mara.com
+```
+password
+```
+123
+```
+
+
+[![](https://github.com/maradelynie/Space-Painel/blob/master/Screenshot%202020-09-28%20221802.png)](Screenshot 2020-09-28 221802.png)
+
 ## Getting Started
 
 For to have this project running on your computer you just need to clone the the repo and run $ yarn or $ npm install.
